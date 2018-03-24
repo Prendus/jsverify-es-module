@@ -1,6 +1,6 @@
 {
   "name": "jsverify-es-module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "jsverify.js",
   "scripts": {
