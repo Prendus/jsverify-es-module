@@ -1,5 +1,5 @@
-const rollupPluginCommonJS = require('rollup-plugin-commonjs');
 const rollupPluginNodeResolve = require('rollup-plugin-node-resolve');
+const rollupPluginCommonJS = require('rollup-plugin-commonjs');
 const rollupPluginNodeBuiltins = require('rollup-plugin-node-builtins');
 const rollupPluginNodeGlobals = require('rollup-plugin-node-globals');
 
@@ -10,12 +10,12 @@ export default {
         format:'es'
     },
     plugins: [
-        rollupPluginNodeBuiltins(),
-        rollupPluginNodeGlobals(),
         rollupPluginNodeResolve({
             preferBuiltins: false,
             browser: true
         }),
-        rollupPluginCommonJS()
+        rollupPluginCommonJS(),
+        rollupPluginNodeBuiltins(),
+        rollupPluginNodeGlobals()
     ]
 }
